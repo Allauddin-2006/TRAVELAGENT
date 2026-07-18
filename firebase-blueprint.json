@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "Trip": {
+      "title": "Trip",
+      "description": "A travel itinerary",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "startingCity": { "type": "string", "maxLength": 100 },
+        "destination": { "type": "string", "maxLength": 100 },
+        "ownerId": { "type": "string", "maxLength": 128 },
+        "collaboratorIds": { "type": "array", "items": { "type": "string" } },
+        "tripPlan": { "type": "object" },
+        "messages": { "type": "array", "items": { "type": "object" } },
+        "createdAt": { "type": "string", "format": "timestamp" },
+        "updatedAt": { "type": "string", "format": "timestamp" }
+      },
+      "required": ["ownerId", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "trips/{tripId}": {
+      "schema": { "$ref": "#/entities/Trip" },
+      "description": "Trips collection"
+    }
+  }
+}

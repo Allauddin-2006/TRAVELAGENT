@@ -1,0 +1,10 @@
+{
+  "name": "TravelGPT",
+  "description": "An advanced AI-powered Travel Planner that creates intelligent, personalized, and end-to-end travel experiences.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
